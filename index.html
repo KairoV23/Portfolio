@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Merouane Kadi - Portfolio</title>
+      <meta property="og:title" content="Merouane Kadi - Portfolio" />
+      <meta property="og:description" content="Game Designer Web Developer" />
+      <meta property="og:image" content="./images/logo.png" />
+      <meta property="og:url" content="https://merouanekadi.netlify.app" />
+      <meta property="og:type" content="website" />
+      <link rel="icon" type="image/png" href="images/logo.png">
+      <link rel="shortcut icon" type="image/png" href="images/logo.png">
+      
+   <link rel="stylesheet" href="CSS/styles.css">
+</head>
+   <body>
+      <!-- ===== LOADING SCREEN ===== -->
+      <div id="loadingScreen">
+         <div class="loading-logo">MK</div>
+         <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+         </div>
+         <div class="loading-text">LOADING...</div>
+      </div>
+      <!-- Backgrounds -->
+      <div class="grid-bg"></div>
+      <div class="particles">
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+      </div>
+      <!-- Shapes décoratives -->
+      <div class="deco-shapes">
+         <div class="deco-shape deco-shape-1"></div>
+         <div class="deco-shape deco-shape-2"></div>
+         <div class="deco-shape deco-shape-3"></div>
+         <div class="deco-shape deco-shape-4"></div>
+      </div>
+      <!-- Navigation -->
+      <nav>
+         <div class="container">
+            <div class="logo" onclick="showPage('home')">MEROUANE KADI</div>
+            <ul>
+               <li class="menu-dropdown">
+                  <button class="menu-btn" onclick="toggleMenu()"><span class="txt" data-en="Menu" data-fr="Menu">Menu</span> ▾</button>
+                  <div class="dropdown-content" id="menuDropdown">
+                     <a onclick="navToSec('hero');closeMenu();"><span class="txt" data-en="Home" data-fr="Accueil">Home</span></a>
+                     <a onclick="navToSec('about');closeMenu();"><span class="txt" data-en="About" data-fr="À propos">About</span></a>
+                     <a onclick="navToSec('services');closeMenu();"><span class="txt" data-en="Services" data-fr="Services">Services</span></a>
+                     <a onclick="navToSec('skills');closeMenu();"><span class="txt" data-en="Skills" data-fr="Compétences">Skills</span></a>
+                     <a onclick="navToSec('projects');closeMenu();"><span class="txt" data-en="Work" data-fr="Travail">Work</span></a>
+                     <a onclick="navToSec('contact');closeMenu();"><span class="txt" data-en="Contact" data-fr="Contact">Contact</span></a>
+                     <a onclick="showPage('pricing'); closeMenu();"><span class="txt" data-en="Pricing" data-fr="Tarifs">Pricing</span></a>
+                  </div>
+               </li>
+               <li class="lang-switcher">
+                  <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                  <span class="lang-separator">/</span>
+                  <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!-- HOME PAGE -->
+      <div id="homePage" class="page active">
+         <!-- Hero -->
+         <section class="hero">
+            <div class="hero-content">
+               <div class="hero-subtitle"><span class="txt" data-en="Game Designer & Web Developer" data-fr="Game Designer & Développeur Web">Game Designer & Web Developer</span></div>
+               <h1><span class="txt" data-en="PORTFOLIO" data-fr="PORTFOLIO">PORTFOLIO</span></h1>
+               <p class="hero-description">
+                  <span class="txt" data-en="Specialized in comprehensive game design documentation and modern web development. Creating strategic solutions that combine analytical thinking with creative execution." data-fr="Spécialisé dans la documentation complète de game design et le développement web moderne. Créer des solutions stratégiques qui combinent pensée analytique et exécution créative.">Specialized in comprehensive game design documentation and modern web development. Creating strategic solutions that combine analytical thinking with creative execution.</span>
+               </p>
+               <a onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="hero-cta"><span class="txt" data-en="Get In Touch" data-fr="Me Contacter">Get In Touch</span></a>
+            </div>
+         </section>
+         <!-- About -->
+         <section id="about">
+            <div class="container">
+               <h2 class="section-title"><span class="txt" data-en="About" data-fr="À Propos">About</span></h2>
+               <p class="section-subtitle"><span class="txt" data-en="Finance student turned creative professional" data-fr="Étudiant en finance devenu professionnel créatif">Finance student turned creative professional</span></p>
+               <div class="about-content">
+                  <h3><span class="txt" data-en="Background" data-fr="Parcours">Background</span></h3>
+                  <p data-en="Currently pursuing finance studies at University of Algiers 3 while building a career in game design and web development. My unique background allows me to approach creative projects with strategic thinking and analytical precision." data-fr="Actuellement étudiant en finance à l'Université d'Alger 3 tout en construisant une carrière dans le game design et le développement web. Mon parcours unique me permet d'aborder les projets créatifs avec une réflexion stratégique et une précision analytique.">Currently pursuing finance studies at University of Algiers 3 while building a career in game design and web development. My unique background allows me to approach creative projects with strategic thinking and analytical precision.</p>
+                  <p><span class="txt" data-en="I specialize in transforming complex game concepts into comprehensive design documents and creating modern, responsive websites that balance aesthetics with functionality." data-fr="Je me spécialise dans la transformation de concepts de jeux complexes en documents de design complets et la création de sites web modernes et responsive qui équilibrent esthétique et fonctionnalité.">I specialize in transforming complex game concepts into comprehensive design documents and creating modern, responsive websites that balance aesthetics with functionality.</span></p>
+                  <p><span class="txt" data-en="Available for freelance projects, collaborations, and consulting opportunities in game design documentation and web development." data-fr="Disponible pour des projets freelance, collaborations et opportunités de consulting en documentation de game design et développement web.">Available for freelance projects, collaborations, and consulting opportunities in game design documentation and web development.</span></p>
+                  <div class="about-stats">
+                     <div class="stat-box">
+                        <div class="stat-number">03+</div>
+                        <div class="stat-label"><span class="txt" data-en="Years Experience" data-fr="Années d'Expérience">Years Experience</span></div>
+                     </div>
+                     <div class="stat-box">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label"><span class="txt" data-en="Projects Completed" data-fr="Projets Complétés">Projects Completed</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Services -->
+         <section id="services">
+            <div class="container">
+               <h2 class="section-title"><span class="txt" data-en="Services" data-fr="Services">Services</span></h2>
+               <p class="section-subtitle"><span class="txt" data-en="Professional solutions tailored to your needs" data-fr="Solutions professionnelles adaptées à vos besoins">Professional solutions tailored to your needs</span></p>
+               <div class="services-grid">
+                  <div class="service-card">
+                     <div class="service-number">01</div>
+                     <h3 data-en="Game Design Documents" data-fr="Documents de Game Design">Game Design Documents</h3>
+                     <p data-en="Comprehensive GDD creation featuring detailed mechanics, economic systems, progression frameworks, and technical specifications." data-fr="Création de GDD complets avec mécaniques détaillées, systèmes économiques, cadres de progression et spécifications techniques.">Comprehensive GDD creation featuring detailed mechanics, economic systems, progression frameworks, and technical specifications.</p>
+                     <ul class="service-features">
+                        <li><span class="txt" data-en="Core gameplay mechanics design" data-fr="Design des mécaniques de gameplay">Core gameplay mechanics design</span></li>
+                        <li>Economic systems & balance</li>
+                        <li><span class="txt" data-en="Progression frameworks" data-fr="Frameworks de progression">Progression frameworks</span></li>
+                        <li><span class="txt" data-en="Technical documentation" data-fr="Documentation technique">Technical documentation</span></li>
+                     </ul>
+                  </div>
+                  <div class="service-card">
+                     <div class="service-number">02</div>
+                     <h3 data-en="Web Development" data-fr="Développement Web">Web Development</h3>
+                     <p data-en="Modern, responsive websites with optimized performance. From landing pages to complex portfolios with custom animations." data-fr="Sites web modernes et responsifs avec performances optimisées. Des pages d'atterrissage aux portfolios complexes avec animations personnalisées.">Modern, responsive websites with optimized performance. From landing pages to complex portfolios with custom animations.</p>
+                     <ul class="service-features">
+                        <li><span class="txt" data-en="Responsive design (mobile-first)" data-fr="Design responsive (mobile-first)">Responsive design (mobile-first)</span></li>
+                        <li><span class="txt" data-en="Custom animations & interactions" data-fr="Animations et interactions personnalisées">Custom animations & interactions</span></li>
+                        <li><span class="txt" data-en="Performance optimization" data-fr="Optimisation de la performance">Performance optimization</span></li>
+                        <li><span class="txt" data-en="SEO best practices" data-fr="Bonnes pratiques SEO">SEO best practices</span></li>
+                     </ul>
+                  </div>
+                  <div class="service-card">
+                     <div class="service-number">03</div>
+                     <h3 data-en="Strategic Consulting" data-fr="Conseil Stratégique">Strategic Consulting</h3>
+                     <p data-en="Business-minded guidance for game projects and digital presence. Leveraging finance background for strategic planning." data-fr="Conseils stratégiques pour projets de jeux et présence numérique. Mise à profit de mon expérience en finance pour la planification stratégique.">Business-minded guidance for game projects and digital presence. Leveraging finance background for strategic planning.</p>
+                     <ul class="service-features">
+                        <li><span class="txt" data-en="Project planning & scope" data-fr="Planification et périmètre de projet">Project planning & scope</span></li>
+                        <li><span class="txt" data-en="Budget optimization" data-fr="Optimisation du budget">Budget optimization</span></li>
+                        <li><span class="txt" data-en="Market positioning" data-fr="Positionnement marché">Market positioning</span></li>
+                        <li><span class="txt" data-en="Development roadmaps" data-fr="Feuilles de route de développement">Development roadmaps</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Skills -->
+         <section id="skills">
+            <div class="container">
+               <h2 class="section-title"><span class="txt" data-en="Skills" data-fr="Compétences">Skills</span></h2>
+               <p class="section-subtitle"><span class="txt" data-en="Technical expertise and creative capabilities" data-fr="Expertise technique et capacités créatives">Technical expertise and creative capabilities</span></p>
+               <div class="skills-grid">
+                  <div class="skill-card">
+                     <h3 data-en="Game Design" data-fr="Game Design">Game Design</h3>
+                     <div class="skill-level">Expert</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-card">
+                     <h3 data-en="HTML / CSS / JS" data-fr="HTML / CSS / JS">HTML / CSS / JS</h3>
+                     <div class="skill-level">Advanced</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-card">
+                     <h3 data-en="Strategic Planning" data-fr="Planification Stratégique">Strategic Planning</h3>
+                     <div class="skill-level">Expert</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-card">
+                     <h3 data-en="UI/UX Design" data-fr="Design UI/UX">UI/UX Design</h3>
+                     <div class="skill-level">Intermediate</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 78%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-card">
+                     <h3 data-en="Documentation" data-fr="Documentation">Documentation</h3>
+                     <div class="skill-level">Expert</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                     </div>
+                  </div>
+                  <div class="skill-card">
+                     <h3 data-en="AI Integration" data-fr="Intégration IA">AI Integration</h3>
+                     <div class="skill-level">Advanced</div>
+                     <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Projects -->
+         <section id="projects">
+            <div class="container">
+               <h2 class="section-title"><span class="txt" data-en="Work" data-fr="Travail">Work</span></h2>
+               <p class="section-subtitle"><span class="txt" data-en="Selected portfolio examples" data-fr="Exemples de portfolio sélectionnés">Selected portfolio examples</span></p>
+               <div class="projects-grid">
+                  <div class="project-card" onclick="showPage('gdd')">
+                     <div class="project-number">PROJECT 01</div>
+                     <h3><span class="txt" data-en="Game Design" data-fr="Game Design">Game Design</span><br><span class="txt" data-en="Document" data-fr="Document">Document</span></h3>
+                     <span class="project-link"><span class="txt" data-en="View Examples" data-fr="Voir Exemples">View Examples</span></span>
+                  </div>
+                  <div class="project-card" onclick="showPage('web')">
+                     <div class="project-number">PROJECT 02</div>
+                     <h3><span class="txt" data-en="Web Development" data-fr="Développement Web">Web Development</span><br><span class="txt" data-en="Portfolio" data-fr="Portfolio">Portfolio</span></h3>
+                     <span class="project-link"><span class="txt" data-en="View Examples" data-fr="Voir Exemples">View Examples</span></span>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Contact -->
+         <section id="contact">
+            <div class="container">
+               <h2 class="section-title"><span class="txt" data-en="Contact" data-fr="Contact">Contact</span></h2>
+               <p class="section-subtitle"><span class="txt" data-en="Available for freelance projects and collaborations" data-fr="Disponible pour projets freelance et collaborations">Available for freelance projects and collaborations</span></p>
+               <div style="text-align: center; margin: 0.5rem 0;">
+                  <a href="https://www.trustpilot.com/review/merouanek.netlify.app" 
+                     target="_blank" 
+                     rel="noopener"
+                     style="display: inline-block; transition: all 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-5px) scale(1.05)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)';">
+                  <img src="images/trustpilot.png" alt="Review us on Trustpilot" style="max-width: 350px; width: 100%; height: auto;">
+                  </a>
+               </div>
+               <div class="contact-grid">
+                  <div class="contact-info">
+                     <h3><span class="txt" data-en="Let's Connect" data-fr="Connectons-nous">Let's Connect</span></h3>
+                     <p><span class="txt" data-en="Whether you need a comprehensive game design document, a modern website, or strategic consulting, I'm available to discuss your project." data-fr="Que vous ayez besoin d'un document de game design complet, d'un site web moderne ou de consulting stratégique, je suis disponible pour discuter de votre projet.">Whether you need a comprehensive game design document, a modern website, or strategic consulting, I'm available to discuss your project.</span></p>
+                     <div class="contact-methods">
+                        <div class="contact-method">
+                           <h4><span class="txt" data-en="Phone" data-fr="Téléphone">Phone</span></h4>
+                           <a href="tel:+213558189752">+213 558 189 752</a>
+                        </div>
+                        <div class="contact-method">
+                           <h4><span class="txt" data-en="Email" data-fr="Email">Email</span></h4>
+                           <a href="mailto:lionagario223@gmail.com">lionagario223@gmail.com</a>
+                        </div>
+                        <div class="contact-method">
+                           <h4><span class="txt" data-en="Discord" data-fr="Discord">Discord</span></h4>
+                           <a href="#">kairoreign</a>
+                        </div>
+                     </div>
+                  </div>
+                  <form class="contact-form" action="https://formspree.io/f/mrebnjzd" method="POST">
+                     <div class="form-group">
+                        <label for="name"><span class="txt" data-en="Name" data-fr="Nom">Name</span></label>
+                        <input type="text" id="name" name="name" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="email"><span class="txt" data-en="Email" data-fr="Email">Email</span></label>
+                        <input type="email" id="email" name="email" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="message"><span class="txt" data-en="Message" data-fr="Message">Message</span></label>
+                        <textarea id="message" name="message" required></textarea>
+                     </div>
+                     <button type="submit" class="form-submit"><span class="txt" data-en="Send Message" data-fr="Envoyer Message">Send Message</span></button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <!-- Footer -->
+         <footer>
+            <div class="container">
+               <p>&copy; 2026 Merouane Kadi</p>
+               <div class="footer-links">
+                  <a onclick="window.scrollTo(0,0)">Home</a>
+                  <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a>
+                  <a onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Services</a>
+                  <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <!-- GDD PAGE -->
+      <div id="gddPage" class="page slider-page">
+         <div class="slider-header">
+            <h1><span class="txt" data-en="Game Design Examples" data-fr="Exemples de Game Design">Game Design Examples</span></h1>
+            <a class="back-btn" onclick="showPage('home')"><span class="txt" data-en="← Back to Home" data-fr="← Retour Accueil">← Back to Home</span></a>
+         </div>
+         <div class="slider-wrapper">
+            <div class="slider-container">
+               <div class="slides" id="gddSlides">
+                  <!-- GDD Slide 1 -->
+                  <div class="slide">
+                     <div class="slide-number">EXAMPLE 01</div>
+                     <h2 class="slide-title"><span class="txt" data-en="RPG Combat System" data-fr="Système de Combat RPG">RPG Combat System</span></h2>
+                     <p class="slide-description"><span class="txt" data-en="Complete action combat mechanics with combo system, skill trees, and AI behavior patterns" data-fr="Mécaniques de combat complètes avec système de combos, arbres de compétences et patterns d'IA">Complete action combat mechanics with combo system, skill trees, and AI behavior patterns</span></p>
+                     <div class="slide-preview">
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vRqLa2Va7W7tVEQRfPfYkmYeZ1XNlJVQKui22SPdbsvIGBsoHHYFWXwm3G9aVNpyNfcZBUvblzrVVIP/pub?embedded=true"></iframe>
+                     </div>
+                  </div>
+                  <!-- GDD Slide 2 -->
+                  <div class="slide">
+                     <div class="slide-number">EXAMPLE 02</div>
+                     <h2 class="slide-title"><span class="txt" data-en="F2P Economy Design" data-fr="Design Économie F2P">F2P Economy Design</span></h2>
+                     <p class="slide-description"><span class="txt" data-en="Monetization strategy with currency systems, gacha mechanics, and player segmentation" data-fr="Stratégie de monétisation avec systèmes de devises, mécaniques gacha et segmentation des joueurs">Monetization strategy with currency systems, gacha mechanics, and player segmentation</span></p>
+                     <div class="slide-preview">
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQhbAWvgdrlQO8WdCI1cbfqS872S6rNZ3Kt6d3L2wH28ee0AtgbcySGQDKssoUrG57znQdjzmyaUjvS/pub?embedded=true"></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="progress-dots">
+                  <div class="dot active" onclick="goToGddSlide(0)"></div>
+                  <div class="dot" onclick="goToGddSlide(1)"></div>
+               </div>
+            </div>
+         </div>
+         <div class="arrow arrow-left" onclick="prevGddSlide()">‹</div>
+         <div class="arrow arrow-right" onclick="nextGddSlide()">›</div>
+      </div>
+      <!-- WEB PAGE -->
+      <div id="webPage" class="page slider-page">
+         <div class="slider-header">
+            <h1><span class="txt" data-en="Web Development Examples" data-fr="Exemples de Développement Web">Web Development Examples</span></h1>
+            <a class="back-btn" onclick="showPage('home')"><span class="txt" data-en="← Back to Home" data-fr="← Retour Accueil">← Back to Home</span></a>
+         </div>
+         <div class="slider-wrapper">
+            <div class="slider-container">
+               <div class="slides" id="webSlides">
+                  <!-- Web Slide 1 -->
+                  <div class="slide">
+                     <div class="slide-number">EXAMPLE 01</div>
+                     <h2 class="slide-title"><span class="txt" data-en="E-Commerce Platform" data-fr="Plateforme E-Commerce">E-Commerce Platform</span></h2>
+                     <p class="slide-description"><span class="txt" data-en="Modern online store with premium design and smooth interactions" data-fr="Boutique en ligne moderne avec design premium et interactions fluides">Modern online store with premium design and smooth interactions</span></p>
+                     <div class="slide-preview">
+                        <iframe src="exemples/web-example-1.html" style="width:100%; height:100%; border:none;"></iframe>
+                     </div>
+                  </div>
+                  <!-- Web Slide 2 -->
+                  <div class="slide">
+                     <div class="slide-number">EXAMPLE 02</div>
+                     <h2 class="slide-title"><span class="txt" data-en="Business Portfolio" data-fr="Portfolio Business">Business Portfolio</span></h2>
+                     <p class="slide-description"><span class="txt" data-en="Corporate website with custom animations, CMS integration, and SEO optimization" data-fr="Site corporate avec animations personnalisées, intégration CMS et optimisation SEO">Corporate website with custom animations, CMS integration, and SEO optimization</span></p>
+                     <div class="slide-preview">
+                        <iframe src="exemples/web-example-2.html" style="width:100%; height:100%; border:none;"></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="progress-dots">
+                  <div class="dot active" onclick="goToWebSlide(0)"></div>
+                  <div class="dot" onclick="goToWebSlide(1)"></div>
+               </div>
+            </div>
+         </div>
+         <div class="arrow arrow-left" onclick="prevWebSlide()">‹</div>
+         <div class="arrow arrow-right" onclick="nextWebSlide()">›</div>
+      </div>
+      <!-- ===== PRICING PAGE ===== -->
+      <div id="pricingPage" class="page">
+         <div class="container">
+            <div class="pricing-intro">
+               <h2><span class="txt" data-en="Professional Packages" data-fr="Packages Professionnels">Professional Packages</span></h2>
+               <p><span class="txt" data-en="Transparent pricing for quality work. All prices in Algerian Dinar (DZD)." data-fr="Tarification transparente pour un travail de qualité. Tous les prix en Dinar Algérien (DZD).">Transparent pricing for quality work. All prices in Algerian Dinar (DZD).</span></p>
+            </div>
+            <div class="pricing-grid">
+               <div class="pricing-card">
+                  <div class="pricing-header">
+                     <div class="pricing-name">BASIC</div>
+                     <div class="pricing-price">25,000<span class="pricing-currency">DZD</span></div>
+                  </div>
+                  <ul class="pricing-features">
+                     <li><span class="txt" data-en="Single landing page" data-fr="Une landing page">Single landing page</span></li>
+                     <li><span class="txt" data-en="Responsive design" data-fr="Design responsive">Responsive design</span></li>
+                     <li><span class="txt" data-en="Basic animations" data-fr="Animations basiques">Basic animations</span></li>
+                     <li><span class="txt" data-en="Contact form" data-fr="Formulaire de contact">Contact form</span></li>
+                     <li><span class="txt" data-en="SEO optimization" data-fr="Optimisation SEO">SEO optimization</span></li>
+                     <li><span class="txt" data-en="1 week delivery" data-fr="Livraison en 1 semaine">1 week delivery</span></li>
+                  </ul>
+                  <button class="pricing-cta" onclick="goToContact();">
+                  <span class="txt" data-en="Get Started" data-fr="Commencer">Get Started</span>
+                  </button>
+               </div>
+               <div class="pricing-card featured">
+                  <div class="pricing-badge">POPULAR</div>
+                  <div class="pricing-header">
+                     <div class="pricing-name">PRO ⭐</div>
+                     <div class="pricing-price">50,000<span class="pricing-currency">DZD</span></div>
+                  </div>
+                  <ul class="pricing-features">
+                     <li><span class="txt" data-en="Complete GDD document" data-fr="Document GDD complet">Complete GDD document</span></li>
+                     <li><span class="txt" data-en="Detailed mechanics" data-fr="Mécaniques détaillées">Detailed mechanics</span></li>
+                     <li><span class="txt" data-en="Economic systems" data-fr="Systèmes économiques">Economic systems</span></li>
+                     <li><span class="txt" data-en="Progression framework" data-fr="Framework de progression">Progression framework</span></li>
+                     <li><span class="txt" data-en="Technical specs" data-fr="Spécifications techniques">Technical specs</span></li>
+                     <li><span class="txt" data-en="Visual references" data-fr="Références visuelles">Visual references</span></li>
+                     <li><span class="txt" data-en="2-3 weeks delivery" data-fr="Livraison 2-3 semaines">2-3 weeks delivery</span></li>
+                  </ul>
+                  <button class="pricing-cta" onclick="goToContact();">
+                  <span class="txt" data-en="Choose PRO" data-fr="Choisir PRO">Choose PRO</span>
+                  </button>
+               </div>
+               <div class="pricing-card">
+                  <div class="pricing-header">
+                     <div class="pricing-name">PREMIUM</div>
+                     <div class="pricing-price">100,000<span class="pricing-currency">+</span></div>
+                  </div>
+                  <ul class="pricing-features">
+                     <li><span class="txt" data-en="Full portfolio website" data-fr="Site portfolio complet">Full portfolio website</span></li>
+                     <li><span class="txt" data-en="Multiple pages" data-fr="Pages multiples">Multiple pages</span></li>
+                     <li><span class="txt" data-en="Advanced animations" data-fr="Animations avancées">Advanced animations</span></li>
+                     <li><span class="txt" data-en="CMS integration" data-fr="Intégration CMS">CMS integration</span></li>
+                     <li><span class="txt" data-en="Custom features" data-fr="Fonctionnalités sur mesure">Custom features</span></li>
+                     <li><span class="txt" data-en="Performance optimization" data-fr="Optimisation performance">Performance optimization</span></li>
+                     <li><span class="txt" data-en="Ongoing support" data-fr="Support continu">Ongoing support</span></li>
+                     <li><span class="txt" data-en="3-4 weeks delivery" data-fr="Livraison 3-4 semaines">3-4 weeks delivery</span></li>
+                  </ul>
+                  <button class="pricing-cta" onclick="goToContact();">
+                  <span class="txt" data-en="Contact Us" data-fr="Nous Contacter">Contact Us</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ===== GAME MODAL ===== -->
+      <div id="gameModal">
+         <div class="game-container">
+            <h2 class="game-title"><span class="txt" data-en="🎮 DODGE GAME 🎮" data-fr="🎮 JEU DODGE 🎮">🎮 DODGE GAME 🎮</span></h2>
+            <canvas id="gameCanvas" class="game-canvas" width="400" height="400"></canvas>
+            <div class="game-score"><span class="txt" data-en="Score:" data-fr="Score :">Score:</span> <span id="gameScore">0</span></div>
+            <div class="game-instructions"><span class="txt" data-en="Use ← and → to dodge white balls!" data-fr="Utilisez ← et → pour esquiver les boules blanches!">Use ← and → to dodge white balls!</span></div>
+            <button class="game-close" onclick="closeGame()"><span class="txt" data-en="Close Game" data-fr="Fermer le Jeu">Close Game</span></button>
+         </div>
+      </div>
+      <script src="js/script.js"></script>
+   </body>
+</html>
